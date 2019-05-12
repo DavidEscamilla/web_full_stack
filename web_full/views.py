@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def post_list(request):
-    return render(request, 'blog/index.html', {})
+def index_view(request):
+    return render(request, 'web/index.html', {})

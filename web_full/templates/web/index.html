@@ -1,6 +1,80 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
 <html>
+<head>
+
+    {% block title %}Inicio{% endblock %}
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+
+</head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div id="index_container" class="col-md-12">
+                <div id="formulario" class="row">
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" id="in_email" placeholder="Enter email">
+                    </div>
+                </div>
+                <div style="padding-top:20px; class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-dark" onclick="test()">Dark</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {% endblock %}
+
 </body>
+
+{% block js %}
+{% endblock %}
+
+<script>
+    {% block script %}
+
+    function test(){
+
+        data = {
+
+            'csrfmiddlewaretoken': "{{csrf_token}}",
+            'email' : $('#in_email').val(),
+
+        }
+
+        console.log(test)
+
+        $.ajax({
+
+            type        : "POST",
+            url         :  "{% url 'Paso_de_datos' %}",
+            data: data,
+            success: function(response){
+
+                $.dialog({
+                    title: '',
+                    content: response.result,
+
+                });
+
+            },
+
+            error: function (xhr, ajaxOptions, thrownError) {
+
+                $.alert('Intentelo de nuevo!');
+
+            }
+        });
+
+    };
+
+    {% endblock %}
+</script>
 </html>
