@@ -1,7 +1,7 @@
 #index_container {
 
     background-color: rgba(136, 132, 136, 0.75);
-    height: 100%;
+    height: 500px;
 
 }
 
@@ -9,4 +9,27 @@
 
     padding-top: 20px;
 
+}
+
+div {
+
+font-family: 'Montserrat';
+
+}
+
+p {
+
+  padding-top: 20px;
+
+}
+
+.carousel-item {
+
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
