@@ -8,5 +8,5 @@ urlpatterns = [
      path('tutorial/', views.tutorial, name='tutorial'),
      path('contact/', views.contact, name='contact'),
      path('test/', Ajax.test, name='test'),
-     path('Send_message/', Ajax.Send_message, name='Send_message'),
+     path('datos/', Ajax.Send_message, name='Send_message'),
 ]
