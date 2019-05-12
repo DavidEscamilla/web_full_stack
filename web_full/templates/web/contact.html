@@ -4,16 +4,42 @@
 <html>
 <head>
 
-    {% block title %}Contacto{% endblock %}
-    {% block css %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    {% endblock %}
+  {% block title %}Contacto{% endblock %}
+  {% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% endblock %}
 
 </head>
 <body>
 
-    {% block content %}
-    {% endblock %}
+  {% block content %}
+  <div class="container col-md-3" style="padding-top:2%;">
+    <form id="form_contact">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 style="padding-top:12%;"> Contacto </h1>
+        </div>
+      </div>
+      <div class="form-group" style="padding-top:10%;">
+        <label for="exampleInputEmail1">Subject</label>
+        <input type="subject" class="form-control" id="subject" aria-describedby="subject">
+        <small id="emailHelp" class="form-text text-muted"></small>
+      </div>
+
+      <div class="form-group text-center" >
+        <label for="in_message">Message</label>
+        <textarea name="textarea_contact" class="form-control" id="in_message" rows="3"></textarea>
+        <small id="emailHelp" class="form-text text-muted" required="true">No olvides escribir tu pregunta</small>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-dark" onclick="test()">Send</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  {% endblock %}
 
 </body>
 
@@ -21,43 +47,51 @@
 {% endblock %}
 
 <script>
-    {% block script %}
+  {% block script %}
 
-    // function test(){
-    //
-    //     data = {
-    //
-    //         'csrfmiddlewaretoken': "{{csrf_token}}",
-    //         'email' : $('#in_email').val(),
-    //
-    //     }
-    //
-    //     console.log(test)
-    //
-    //     $.ajax({
-    //
-    //         type        : "POST",
-    //         url         :  "{% url 'Paso_de_datos' %}",
-    //         data: data,
-    //         success: function(response){
-    //
-    //             $.dialog({
-    //                 title: '',
-    //                 content: response.result,
-    //
-    //             });
-    //
-    //         },
-    //
-    //         error: function (xhr, ajaxOptions, thrownError) {
-    //
-    //             $.alert('Intentelo de nuevo!');
-    //
-    //         }
-    //     });
-    //
-    // };
+  $( "#form_contact" ).validate({
 
-    {% endblock %}
+  rules: {
+    textarea_contact: {
+      required: true
+    }
+  }
+});
+
+  function test(){
+
+    data = {
+
+      'csrfmiddlewaretoken': "{{csrf_token}}",
+      'subject' : $('#subject').val(),
+      'in_message' : $('#in_message').val(),
+
+    }
+
+    $.ajax({
+
+      type        : "POST",
+      url         :  "{% url 'Paso_de_datos' %}",
+      data: data,
+      success: function(response){
+
+        $.dialog({
+          title: '',
+          content: response.result,
+
+        });
+
+      },
+
+      error: function (xhr, ajaxOptions, thrownError) {
+
+        $.alert('Intentelo de nuevo!');
+
+      }
+    });
+
+  };
+
+  {% endblock %}
 </script>
 </html>
