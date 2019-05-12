@@ -9,12 +9,12 @@ def test(request):
     return HttpResponse()
 
 
-def Paso_de_datos(request):
+def Send_message(request):
     d_respuesta = {}
     form = request.POST
-    subject = form.get('subject', "anonymous")
+    email = form.get('email', "anonymous")
     in_message = form.get('in_message', None)
-    message = 'Subject: {}\n\n{}'.format(subject, in_message)
+    message = 'Subject:{}\n\n{}'.format(email, in_message)
     print (message)
     send_email.Send_Email().send(message)
 

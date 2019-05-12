@@ -13,7 +13,7 @@
 <body>
 
   {% block content %}
-  <div class="container col-md-3" style="padding-top:2%;">
+  <div class="container col-md-3" style="padding-top:4%;">
     <form id="form_contact">
       <div class="row">
         <div class="col-md-12 text-center">
@@ -21,8 +21,8 @@
         </div>
       </div>
       <div class="form-group" style="padding-top:10%;">
-        <label for="exampleInputEmail1">Subject</label>
-        <input type="subject" class="form-control" id="subject" aria-describedby="subject">
+        <label for="exampleInputEmail1">Email Address</label>
+        <input name="email" type="email" class="form-control" id="email" aria-describedby="email">
         <small id="emailHelp" class="form-text text-muted"></small>
       </div>
 
@@ -33,7 +33,7 @@
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
-          <button type="button" class="btn btn-dark" onclick="test()">Send</button>
+          <button name="submitHandler" type="submit" class="btn btn-dark" onclick="form_contact()">Send</button>
         </div>
 
       </div>
@@ -49,21 +49,35 @@
 <script>
   {% block script %}
 
-  $( "#form_contact" ).validate({
+  function form_contact(){
 
-  rules: {
-    textarea_contact: {
-      required: true
-    }
-  }
-});
+    $( "#form_contact" ).validate({
 
-  function test(){
+      rules: {
+        textarea_contact: {
+          required: true
+        }
+      },
+      submitHandler: function() {
+        validate_message();
+      },
+      email: function() {
+
+        validate_message();
+
+      }
+
+    });
+
+  };
+
+
+  function validate_message(){
 
     data = {
 
       'csrfmiddlewaretoken': "{{csrf_token}}",
-      'subject' : $('#subject').val(),
+      'email' : $('#email').val(),
       'in_message' : $('#in_message').val(),
 
     }
@@ -71,7 +85,7 @@
     $.ajax({
 
       type        : "POST",
-      url         :  "{% url 'Paso_de_datos' %}",
+      url         :  "{% url 'Send_message' %}",
       data: data,
       success: function(response){
 
