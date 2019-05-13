@@ -16,10 +16,23 @@ font-family: 'Montserrat';
 
 }
 
+body {
+
+  color: rgb(218, 215, 210);
+  background-color: rgb(24, 26, 27);
+}
+
 h1 {
 
-    padding-top: 5%;
+    padding-top: 30px;
 
+}
+
+canvas {
+display: block;
+position:absolute;
+top:0;
+left:0;
 }
 
 #img_1 {
