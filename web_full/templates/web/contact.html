@@ -37,12 +37,12 @@
         </div>
 
       </div>
-      <!-- <div class="row">
+      <div class="row">
         <div class="col-md-12 text-center" style="padding-top:10px;">
           <button id="test" name="test" type="submit" class="btn btn-dark">test</button>
         </div>
 
-      </div> -->
+      </div>
     </form>
   </div>
   {% endblock %}
@@ -56,31 +56,32 @@
 <script>
   {% block script %}
 
-//   $(document).on("click","#test",function(e) {
-//     e.preventDefault
-//     $( "#form_contact" ).validate({
-//
-//       rules: {
-//         textarea_contact: {
-//           required: true
-//         }
-//       },
-//       submitHandler: function() {
-//         validate_message();
-//       },
-//       email: function() {
-//
-//         validate_message();
-//
-//       }
-//
-//     });
-// });
+  $(document).on("click","#test",function(e) {
+    e.preventDefault
+    validate_message();
+    $( "#form_contact" ).validate({
+
+      rules: {
+        textarea_contact: {
+          required: true
+        }
+      },
+      submitHandler: function() {
+        validate_message();
+      },
+      email: function() {
+
+        validate_message();
+
+      }
+
+    });
+});
 
 
 function form_contact(){
 
-    validate_message();
+
 
     // $( "#form_contact" ).validate({
     //
@@ -100,7 +101,6 @@ function form_contact(){
     // });
 
     };
-
 
   function validate_message(){
 
