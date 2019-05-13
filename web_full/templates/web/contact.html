@@ -56,6 +56,7 @@
   {% block script %}
 
   $(document).on("click","#test",function(e) {
+    e.preventDefault
     $( "#form_contact" ).validate({
 
       rules: {
