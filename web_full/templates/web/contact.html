@@ -59,48 +59,25 @@
   $(document).on("click","#test",function(e) {
     e.preventDefault
     validate_message();
-    $( "#form_contact" ).validate({
-
-      rules: {
-        textarea_contact: {
-          required: true
-        }
-      },
-      submitHandler: function() {
-        validate_message();
-      },
-      email: function() {
-
-        validate_message();
-
-      }
-
-    });
 });
 
-
-function form_contact(){
-
-
-
-    // $( "#form_contact" ).validate({
-    //
-    //   rules: {
-    //     textarea_contact: {
-    //       required: true
-    //     }
-    //   },
-    //   submitHandler: function() {
-    //     validate_message();
-    //   },
-    //   email: function() {
-    //     validate_message();
-    //
-    //   }
-    //
-    // });
-
-    };
+// $( "#form_contact" ).validate({
+//
+//   rules: {
+//     textarea_contact: {
+//       required: true
+//     }
+//   },
+//   submitHandler: function() {
+//     validate_message();
+//   },
+//   email: function() {
+//
+//     validate_message();
+//
+//   }
+//
+// });
 
   function validate_message(){
 
