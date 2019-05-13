@@ -22,7 +22,7 @@
       </div>
       <div class="form-group" style="padding-top:10%;">
         <label for="exampleInputEmail1">Email Address</label>
-        <input name="email" type="email" class="form-control" id="email" aria-describedby="email">
+        <input name="email" type="email" class="form-control" id="email" aria-describedby="email" required="true">
         <small id="emailHelp" class="form-text text-muted"></small>
       </div>
 
@@ -34,6 +34,12 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <button name="submitHandler" type="submit" class="btn btn-dark" onclick="form_contact()">Send</button>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center" style="padding-top:10px;">
+          <button id="test" name="test" type="submit" class="btn btn-dark">test</button>
         </div>
 
       </div>
@@ -49,8 +55,28 @@
 <script>
   {% block script %}
 
-  function form_contact(){
+  $(document).on("click","#test",function(e) {
+    $( "#form_contact" ).validate({
 
+      rules: {
+        textarea_contact: {
+          required: true
+        }
+      },
+      submitHandler: function() {
+        validate_message();
+      },
+      email: function() {
+
+        validate_message();
+
+      }
+
+    });
+});
+
+
+function form_contact(){
     $( "#form_contact" ).validate({
 
       rules: {
@@ -69,7 +95,7 @@
 
     });
 
-  };
+    };
 
 
   function validate_message(){
