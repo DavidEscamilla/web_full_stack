@@ -50,6 +50,7 @@
 </body>
 
 {% block js %}
+    <script src="{% static 'js/jquery.validation.js' %}"></script>
 {% endblock %}
 
 <script>
@@ -86,12 +87,10 @@ function form_contact(){
           required: true
         }
       },
-      submitHandler: function(e) {
-        e.preventDefault
+      submitHandler: function() {
         validate_message();
       },
-      email: function(e) {
-        e.preventDefault
+      email: function() {
         validate_message();
 
       }
