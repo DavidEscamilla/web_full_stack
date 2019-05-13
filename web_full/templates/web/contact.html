@@ -35,15 +35,15 @@
         <div class="col-md-12 text-center">
           <button name="submitHandler" type="submit" class="btn btn-dark" onclick="form_contact()">Send</button>
         </div>
-
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-center" style="padding-top:10px;">
-          <button id="test" name="test" type="submit" class="btn btn-dark">test</button>
-        </div>
-
       </div>
     </form>
+
+    <div class="row">
+      <div class="col-md-12 text-center" style="padding-top:10px;">
+        <button id="test" name="test" type="button" class="btn btn-dark">test</button>
+      </div>
+
+    </div>
   </div>
   {% endblock %}
 
@@ -61,23 +61,29 @@
     validate_message();
 });
 
-// $( "#form_contact" ).validate({
-//
-//   rules: {
-//     textarea_contact: {
-//       required: true
-//     }
-//   },
-//   submitHandler: function() {
-//     validate_message();
-//   },
-//   email: function() {
-//
-//     validate_message();
-//
-//   }
-//
-// });
+function form_contact(){
+
+  $( "#form_contact" ).validate({
+
+    rules: {
+      textarea_contact: {
+        required: true
+      }
+    },
+    submitHandler: function() {
+      validate_message();
+    },
+    email: function() {
+
+      validate_message();
+
+    }
+
+  });
+
+}
+
+
 
   function validate_message(){
 
