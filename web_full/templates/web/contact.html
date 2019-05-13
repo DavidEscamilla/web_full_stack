@@ -56,8 +56,8 @@
 <script>
   {% block script %}
 
-  $(document).on("click","#test",function(e) {
-    e.preventDefault
+  $(document).on("click","#test",function() {
+
     validate_message();
 });
 
@@ -74,7 +74,6 @@ function form_contact(){
       validate_message();
     },
     email: function() {
-
       validate_message();
 
     }
