@@ -1,17 +1,19 @@
+{% extends 'web/base.html' %}
 {% load static %}
 
 <html>
 <head>
 
-  <link href="//fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'css/jquery-confirm.css' %}">
+  {% block title %}Contacto{% endblock %}
+  {% block css %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% endblock %}
 
 </head>
 <body>
 
-  <div class="container col-md-12" style="padding-top:4%;">
+  {% block content %}
+  <div class="container col-md-3" style="padding-top:4%;">
 
     <form id="form_contact">
       <div class="row">
@@ -20,6 +22,7 @@
         </div>
       </div>
       <div class="form-group" style="padding-top:10%;">
+
         <label for="email">Email Address</label>
         <input name="email" type="email" class="form-control" id="email" aria-describedby="email" required="true" style="color: rgb(218, 215, 210);background-color: rgb(24, 26, 27);">
         <div class="valid-feedback">Valid.</div>
@@ -40,19 +43,24 @@
 </form>
 </div>
 
+{% endblock %}
+{% block footer %}
+<footer id="base_footer_index" class="page-footer font-small blue">
+  <div class="footer text-center py-3">2018-2019
+    <a href="https://gitlab.com/DavidEscamilla/HashCrack">HashCrack</a>
+
+  </div>
+</footer>
+{% endblock %}
 
 </body>
 
-
-<script src="{% static 'js/jquery.js' %}"></script>
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'js/datatables.min.js' %}"></script>
-<script src="{% static 'js/dataTablesSelect.js' %}"></script>
-<script src="{% static 'js/datatables.buttons.js' %}"></script>
-<script src="{% static 'js/jquery-confirm.js' %}"></script>
-
+{% block js %}
+<script src="{% static 'js/jquery.validation.js' %}"></script>
+{% endblock %}
 
 <script>
+  {% block script %}
 
   $(document).on("click","#test",function() {
 
@@ -116,5 +124,6 @@
 
   };
 
+  {% endblock %}
 </script>
 </html>
