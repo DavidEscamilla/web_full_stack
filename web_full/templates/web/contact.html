@@ -6,7 +6,7 @@
   <link href="//fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/jquery-confirm.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_contact.css' %}">
 
 </head>
 <body>
@@ -46,11 +46,7 @@
 
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'js/datatables.min.js' %}"></script>
-<script src="{% static 'js/dataTablesSelect.js' %}"></script>
-<script src="{% static 'js/datatables.buttons.js' %}"></script>
 <script src="{% static 'js/jquery-confirm.js' %}"></script>
-
 
 <script>
 
@@ -101,7 +97,6 @@
             confirm: function () {
               location.href = "{% url 'index_view' %}";
             },
-
           }
         });
 
