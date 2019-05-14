@@ -11,8 +11,11 @@
 
 </head>
 <body>
-
+    {% block navitem %}
+    <li class="nav-item">
+    {% endblock %}
     {% block content %}
+
     <div class="container col-md-12 text-center height:100%;">
         <div class="row" style="padding-top: 100px;">
             <div class="col-md-4">
@@ -115,7 +118,7 @@
 
 <script>
     {% block script %}
-    
+
     {% endblock %}
 </script>
 </html>

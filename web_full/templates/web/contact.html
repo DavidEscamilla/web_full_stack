@@ -50,7 +50,9 @@
 
 <script>
 
-  $(document).on("click","#test",function() {
+  $(document).on("click","#test",function(e) {
+
+    e.preventDefault()
 
     if ($('#email').val() == ""){
       $.dialog({
