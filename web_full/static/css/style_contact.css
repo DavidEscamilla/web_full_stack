@@ -24,6 +24,14 @@ h1 {
 }
 
 .jconfirm-box {
-  background: black;
+
+    width: 500px;
+    overflow: hidden;
+
+}
+
+.div.jconfirm-content-pane {
+
+  overflow: hidden;
 
 }
