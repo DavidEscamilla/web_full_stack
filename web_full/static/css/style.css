@@ -42,17 +42,7 @@ canvas {
 
 }
 
-#base_footer {
-  position: bottom;
-  bottom: 0;
-  width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
-  line-height: 20px; /* Vertically center the text there */
-  background-color: rgba(136, 132, 136, 0.75);
-}
-
 #base_footer_index {
-
   width: 100%;
   height: 60px; /* Set the fixed height of the footer here */
   line-height: 20px; /* Vertically center the text there */
