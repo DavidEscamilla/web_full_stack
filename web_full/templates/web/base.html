@@ -25,6 +25,7 @@
         <ul class="navbar-nav ml-auto">
           {% block navitem1 %}
           {% endblock %}
+
             <a class="nav-link" href="{% url 'index_view' %}">Inicio
               <span class="sr-only">(current)</span>
             </a>
@@ -70,10 +71,9 @@
 <script>
 $('#button_contact').click( function(e) {
 
-
-  console.log('test')
   $.dialog({
     title: '',
+    columnClass: 'medium',
     content: "URL: {% url 'contact' %}",
   });
 
