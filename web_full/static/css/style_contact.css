@@ -22,3 +22,15 @@ h1 {
     padding-top: 30px;
 
 }
+
+.jconfirm-box {
+
+    overflow: hidden;
+
+}
+
+.div.jconfirm-content-pane {
+
+  overflow: hidden;
+
+}
