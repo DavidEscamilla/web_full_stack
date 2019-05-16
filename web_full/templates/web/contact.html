@@ -13,7 +13,6 @@
 
   <div class="container col-md-12" style="padding-top:4%;">
 
-    <form id="form_contact">
       <div class="row">
         <div class="col-md-12 text-center">
           <h1> Contacto </h1>
@@ -34,12 +33,10 @@
       </div>
   <div class="row">
     <div class="col-md-12 text-center" style="padding-top:10px;padding-bottom:150px">
-      <button id="test" name="test" type="button" class="btn btn-dark">Send</button>
+      <button id="test" name="test" type="button" onclick="open_contact()" class="btn btn-dark">Send</button>
     </div>
   </div>
-</form>
 </div>
-
 
 </body>
 
@@ -49,9 +46,8 @@
 
 <script>
 
-  $(document).on("click","#test",function(e) {
 
-    e.preventDefault()
+  function open_contact(){
 
     if ($('#email').val() == ""){
       $.dialog({
@@ -71,8 +67,7 @@
 
     }
 
-
-  });
+  }
 
   function validate_message(){
 
