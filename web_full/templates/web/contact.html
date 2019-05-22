@@ -50,16 +50,12 @@
   function open_contact(){
 
     if ($('#email').val() == ""){
-      $.dialog({
-        title: '',
-        content: "Introduzca su email",
-      });
+
+      show_dialog("Introduzca su email");
 
     }else if ($('#in_message').val() == ""){
-      $.dialog({
-        title: '',
-        content: "Introduzca descripcion",
-      });
+
+        show_dialog("Introduzca descripcion");
 
     }else{
 
@@ -106,6 +102,15 @@
     });
 
   };
+
+  function show_dialog(contenido){
+
+    $.dialog({
+      title: '',
+      content: contenido,
+    });
+
+  }
 
 </script>
 </html>

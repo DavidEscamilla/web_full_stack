@@ -13,50 +13,64 @@
 <body>
     {% block navitem %}
     <li class="nav-item">
-    {% endblock %}
-    {% block content %}
+        {% endblock %}
+        {% block content %}
 
-    <div class="container col-md-12 text-center height:100%;">
-        <div class="row" style="padding-top: 100px;">
-            <div class="col-md-4">
-                <img src="/static/media/image_1.jpg" class="img-fluid" alt="Responsive image">
-                <p class="text-justify">
-                    Lorem fistrum la caidita está la cosa muy malar benemeritaar ese que llega se calle ustée papaar papaar.
-                    Fistro fistro diodeno por la gloria de mi madre ese que llega me cago en tus muelas por la gloria de mi
-                    madre por la gloria de mi madre te va a hasé pupitaa condemor pecador. Diodenoo te va a hasé pupitaa
-                    condemor papaar papaar. Papaar papaar diodeno mamaar no puedor ahorarr me cago en tus muelas por la
-                    gloria de mi madre ese hombree torpedo tiene musho peligro. Me cago en tus muelas fistro a wan pecador
-                    torpedo. No te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl te voy a borrar el
-                     cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
-                     Ese hombree me cago en tus muelas ese pedazo de amatomaa.
-                </p>
-            </div>
-            <div class="col-md-4">
-                <img src="/static/media/image_1.jpg" class="img-fluid" alt="Responsive image">
-                <p class="text-justify">
-                    Lorem fistrum la caidita está la cosa muy malar benemeritaar ese que llega se calle ustée papaar papaar.
-                    Fistro fistro diodeno por la gloria de mi madre ese que llega me cago en tus muelas por la gloria de mi
-                    madre por la gloria de mi madre te va a hasé pupitaa condemor pecador. Diodenoo te va a hasé pupitaa
-                    condemor papaar papaar. Papaar papaar diodeno mamaar no puedor ahorarr me cago en tus muelas por la
-                    gloria de mi madre ese hombree torpedo tiene musho peligro. Me cago en tus muelas fistro a wan pecador
-                    torpedo. No te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl te voy a borrar el
-                     cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
-                     Ese hombree me cago en tus muelas ese pedazo de amatomaa.
-                </p>
-            </div>
-            <div class="col-md-4">
-                <img src="/static/media/image_1.jpg" class="img-fluid" alt="Responsive image">
-                <p class="text-justify">
-                    Lorem fistrum la caidita está la cosa muy malar benemeritaar ese que llega se calle ustée papaar papaar.
-                    Fistro fistro diodeno por la gloria de mi madre ese que llega me cago en tus muelas por la gloria de mi
-                    madre por la gloria de mi madre te va a hasé pupitaa condemor pecador. Diodenoo te va a hasé pupitaa
-                    condemor papaar papaar. Papaar papaar diodeno mamaar no puedor ahorarr me cago en tus muelas por la
-                    gloria de mi madre ese hombree torpedo tiene musho peligro. Me cago en tus muelas fistro a wan pecador
-                    torpedo. No te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl te voy a borrar el
-                     cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
-                     Ese hombree me cago en tus muelas ese pedazo de amatomaa.
-                </p>
-            </div>
+        <div class="container col-md-12 height:100%;">
+            <div class="row" style="padding-top: 100px;">
+                <div class="col-md-4">
+                    <img src="/static/media/image_1.jpg" class="img-fluid" alt="Responsive image">
+                    <p class="text-justify">
+                        Arrancamos nuestro sistema Linux iniciando sesión con el
+                        usuario que hemos creado al instalar nuestra distribución.
+                        Iniciamos el servicio “ssh” para poder conectarnos
+                        y comprobamos que esté activo.
+                    </p>
+                    <p class="lead text-center" style="color:red">
+                        En LINUX no es necesaria la conexion a internet
+                    </p>
+
+                    <ul class="list-group" style="padding-top:4%;">
+
+                        <li class="list-group-item list-group-item-dark">1.$ sudo service ssh start</li>
+                        <li class="list-group-item list-group-item-dark">2.$ service ssh status</li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img src="/static/media/image_2.jpg" class="img-fluid" alt="Responsive image">
+                    <p class="text-justify">
+                        Cuando arrancamos la aplicacion debemos introducir en
+                        server la dirección IP de nuestra máquina,
+                        que la averiguamos con el siguiente comando:
+                    </p>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-dark">1.$ ifconfig</li>
+                        <!-- <li class="list-group-item list-group-item-dark">2.$ service ssh status</li> -->
+                    </ul>
+                    <p class="text-justify">
+                        En el caso de tener Wifi sería wlan0, esto podría variar
+                        en el caso de usar una antena wifi externa.
+                    </p>
+                    <p class="text-justify">
+                        Si tuviéramos conexión por cable pondríamos la de eth0
+                        En mi caso introduzco la wlan0 ya que estoy conectado por wifi.
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+                    <img src="/static/media/image_1.jpg" class="img-fluid" alt="Responsive image">
+                    <p class="text-justify">
+                        Lorem fistrum la caidita está la cosa muy malar benemeritaar ese que llega se calle ustée papaar papaar.
+                        Fistro fistro diodeno por la gloria de mi madre ese que llega me cago en tus muelas por la gloria de mi
+                        madre por la gloria de mi madre te va a hasé pupitaa condemor pecador. Diodenoo te va a hasé pupitaa
+                        condemor papaar papaar. Papaar papaar diodeno mamaar no puedor ahorarr me cago en tus muelas por la
+                        gloria de mi madre ese hombree torpedo tiene musho peligro. Me cago en tus muelas fistro a wan pecador
+                        torpedo. No te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl te voy a borrar el
+                        cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
+                        Ese hombree me cago en tus muelas ese pedazo de amatomaa.
+                    </p>
+                </div>
             </div>
             <div class="row" style="padding-top: 100px;">
                 <div class="col-md-4">
@@ -68,8 +82,8 @@
                         condemor papaar papaar. Papaar papaar diodeno mamaar no puedor ahorarr me cago en tus muelas por la
                         gloria de mi madre ese hombree torpedo tiene musho peligro. Me cago en tus muelas fistro a wan pecador
                         torpedo. No te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl te voy a borrar el
-                         cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
-                         Ese hombree me cago en tus muelas ese pedazo de amatomaa.
+                        cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
+                        Ese hombree me cago en tus muelas ese pedazo de amatomaa.
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -81,8 +95,8 @@
                         condemor papaar papaar. Papaar papaar diodeno mamaar no puedor ahorarr me cago en tus muelas por la
                         gloria de mi madre ese hombree torpedo tiene musho peligro. Me cago en tus muelas fistro a wan pecador
                         torpedo. No te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl te voy a borrar el
-                         cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
-                         Ese hombree me cago en tus muelas ese pedazo de amatomaa.
+                        cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
+                        Ese hombree me cago en tus muelas ese pedazo de amatomaa.
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -94,31 +108,31 @@
                         condemor papaar papaar. Papaar papaar diodeno mamaar no puedor ahorarr me cago en tus muelas por la
                         gloria de mi madre ese hombree torpedo tiene musho peligro. Me cago en tus muelas fistro a wan pecador
                         torpedo. No te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl te voy a borrar el
-                         cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
-                         Ese hombree me cago en tus muelas ese pedazo de amatomaa.
+                        cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
+                        Ese hombree me cago en tus muelas ese pedazo de amatomaa.
                     </p>
                 </div>
-                </div>
+            </div>
 
-    </div>
-
-    {% endblock %}
-    {% block footer %}
-    <footer id="base_footer_index" class="page-footer font-small blue">
-        <div class="footer text-center py-3">2018-2019
-            <a href="https://gitlab.com/DavidEscamilla/HashCrack">HashCrack</a>
         </div>
-    </footer>
+
+        {% endblock %}
+        {% block footer %}
+        <footer id="base_footer_index" class="page-footer font-small blue">
+            <div class="footer text-center py-3">2018-2019
+                <a href="https://gitlab.com/DavidEscamilla/HashCrack">HashCrack</a>
+            </div>
+        </footer>
+        {% endblock %}
+
+    </body>
+
+    {% block js %}
     {% endblock %}
 
-</body>
+    <script>
+        {% block script %}
 
-{% block js %}
-{% endblock %}
-
-<script>
-    {% block script %}
-
-    {% endblock %}
-</script>
-</html>
+        {% endblock %}
+    </script>
+    </html>
