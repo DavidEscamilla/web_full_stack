@@ -1,37 +1,16 @@
-{% extends 'web/base.html' %}
 {% load static %}
 
 <html>
 <head>
-
-    {% block title %}Inicio{% endblock %}
-    {% block css %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    {% endblock %}
-
 </head>
 <body>
 
-  {% block navitem1 %}
-    <li class="nav-item">
-  {% endblock %}
-{% block navitem %}
-<li class="nav-item">
-  {% endblock %}
-{% block navitem2 %}
-<li class="nav-item">
-  {% endblock %}
-{% block navitem3 %}
-<li class="nav-item">
-  {% endblock %}
-
-    {% block content %}
-    <div class="container col-md-6" style="padding-top:5%;">
         <header>
             <h1 class="text-center display-3">Acerca de HashCrack</h1>
         </header>
 
-        <div class="col-md-12" style="">
+        <div class="col-xs-12 col-md-12">
             <p class="text-justify">
                 HashCrack es un proyecto de software-libre que trata de
                 hacer menos engorroso y fácil, la tarea de des-encriptar
@@ -45,58 +24,8 @@
                 todo almacenado en el /home de nuestra máquina Linux. También implementa la herramienta
                 “the harvester” que mediante motores de búsqueda indexa correos y hosts de un dominio
                 en particular.
-                Lorem fistrum la caidita está la cosa muy malar benemeritaar ese que llega se calle ustée papaar papaar.
-                Fistro fistro diodeno por la gloria de mi madre ese que llega me cago en tus muelas por la gloria de mi
-                madre por la gloria de mi madre te va a hasé pupitaa condemor pecador. Diodenoo te va a hasé pupitaa
-                condemor papaar papaar. Papaar papaar diodeno mamaar no puedor ahorarr me cago en tus muelas por la
-                gloria de mi madre ese hombree torpedo tiene musho peligro. Me cago en tus muelas fistro a wan pecador
-                torpedo. No te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl te voy a borrar el
-                cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
-                Ese hombree me cago en tus muelas ese pedazo de amatomaa.
             </p>
-            <p class="text-justify">
-                HashCrack es un proyecto de software-libre que trata de
-                hacer menos engorroso y fácil, la tarea de des-encriptar
-                un hash en (MD5-SHA1-SHA256)
-                HashCrack es un proyecto surgido de la necesidad de des-encriptar un hash de manera más intuitiva
-                para usuarios no tan familiarizados en la materia. Utiliza la potencia de la herramienta “HashCat”,
-                el descifrador de contraseñas más rápido del mundo, que utilizando los componentes de nuestro
-                ordenador puede realizar las comprobaciones muy rápido con diccionarios de muchos gigabytes;
-                HashCrack utiliza una función para poder subir un hash mediante conexión ftp al servidor para
-                poder des-encriptarlo, y también convertir texto plano en hash (SHA256-MD5-SHA1),
-                todo almacenado en el /home de nuestra máquina Linux. También implementa la herramienta
-                “the harvester” que mediante motores de búsqueda indexa correos y hosts de un dominio
-                en particular.
-                Lorem fistrum la caidita está la cosa muy malar benemeritaar ese que llega se calle ustée papaar papaar.
-                Fistro fistro diodeno por la gloria de mi madre ese que llega me cago en tus muelas por la gloria de mi
-                madre por la gloria de mi madre te va a hasé pupitaa condemor pecador. Diodenoo te va a hasé pupitaa
-                condemor papaar papaar. Papaar papaar diodeno mamaar no puedor ahorarr me cago en tus muelas por la
-                gloria de mi madre ese hombree torpedo tiene musho peligro. Me cago en tus muelas fistro a wan pecador
-                torpedo. No te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl te voy a borrar el
-                cerito fistro a wan diodeno. Está la cosa muy malar al ataquerl está la cosa muy malar apetecan.
-                Ese hombree me cago en tus muelas ese pedazo de amatomaa.
-            </p>
-        </div>
     </div>
-    {% endblock %}
-
-    {% block footer %}
-    <footer id="base_footer_index" class="page-footer font-small blue">
-        <div class="footer text-center py-3">2018-2019
-            <a href="https://gitlab.com/DavidEscamilla/HashCrack">HashCrack</a>
-        </div>
-    </footer>
-    {% endblock %}
 
 </body>
-
-{% block js %}
-{% endblock %}
-
-<script>
-    {% block script %}
-
-
-    {% endblock %}
-</script>
 </html>
