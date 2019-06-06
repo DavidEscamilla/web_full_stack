@@ -88,15 +88,12 @@
   function validate_message(){
 
     data = {
-
       'csrfmiddlewaretoken': "{{csrf_token}}",
       'email' : $('#email').val(),
       'in_message' : $('#in_message').val(),
-
     }
 
     $.ajax({
-
       type        : "POST",
       url         :  "{% url 'Send_message' %}",
       data: data,
@@ -114,11 +111,8 @@
         });
 
       },
-
       error: function (xhr, ajaxOptions, thrownError) {
-
         $.alert('Intentelo de nuevo!');
-
       }
     });
 
