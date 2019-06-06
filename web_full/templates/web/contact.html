@@ -11,9 +11,11 @@
 </head>
 <body>
 
-  <div class="container col-md-12" style="padding-top:4%;">
 
+
+  <div class="container col-md-12" style="padding-top:4%;">
       <div class="row">
+
         <div class="col-md-12 text-center">
           <h1> Contacto </h1>
         </div>
@@ -38,6 +40,12 @@
   </div>
 </div>
 
+<div id="div_progress" class="progress" hidden>
+<div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+<span id="current-progress"></span>
+</div>
+</div>
+
 </body>
 
 <script src="{% static 'js/jquery.js' %}"></script>
@@ -45,6 +53,8 @@
 <script src="{% static 'js/jquery-confirm.js' %}"></script>
 
 <script>
+
+
 
 
   function open_contact(){
@@ -59,7 +69,27 @@
 
     }else{
 
-      validate_message();
+      $(function() {
+    $('#div_progress').attr('hidden',false);
+        var current_progress = 0;
+
+          var interval = setInterval(function() {
+              current_progress += 25;
+              $("#dynamic")
+              .css("width", current_progress + "%")
+              .attr("aria-valuenow", current_progress)
+              .text(current_progress + "% Complete");
+              if (current_progress >= 100)
+                  clearInterval(interval);
+              if (current_progress == 100)
+                validate_message();
+
+          }, 1000);
+
+
+      });
+
+
 
     }
 
@@ -75,13 +105,14 @@
 
     }
 
+
+
     $.ajax({
 
       type        : "POST",
       url         :  "{% url 'Send_message' %}",
       data: data,
       success: function(response){
-
         $.confirm({
           title: 'Exito!',
           content: response.result,
