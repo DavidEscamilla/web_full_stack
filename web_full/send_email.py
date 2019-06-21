@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import smtplib
 import ssl
-import paramiko
 
 
 class Send_Email():
